@@ -206,7 +206,7 @@ class File(BaseFile):
         self.item.session.mount_http_adapter(max_retries=retries)
         file_path = self.name if not file_path else file_path
         n = file_path.split(".")[1]
-        if n == 'jpg' || n == 'gif' :
+        if n == 'jpg' or n == 'gif' :
             #print(file_path)
             open(file_path,"w+").close()
             return True
