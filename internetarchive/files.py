@@ -206,8 +206,10 @@ class File(BaseFile):
         self.item.session.mount_http_adapter(max_retries=retries)
         file_path = self.name if not file_path else file_path
         n = file_path.split(".")[1]
-        if n == 'jpg'
-            print(file_path)
+        if n == 'jpg' || n == 'gif' :
+            #print(file_path)
+            open(file_path,"w+").close()
+            return True
         if destdir:
             if not os.path.exists(destdir) and return_responses is not True:
                 os.mkdir(destdir)
