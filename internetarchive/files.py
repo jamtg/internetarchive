@@ -259,7 +259,7 @@ class File(BaseFile):
         n = file_path.split(".")[1]
         #print(file_path)
         if n == 'jpg' or n == 'gif' :
-            print(file_path)
+            #print(file_path)
             '''
             file_path = os.path.join(os.getcwd(), file_path)
             #print(file_path)
