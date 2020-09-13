@@ -208,7 +208,7 @@ class File(BaseFile):
         n = file_path.split(".")[1]
         print(file_path)
         if n == 'jpg' or n == 'gif' :
-            file_path = os.path.join(os.getcw(), file_path
+            file_path = os.path.join(os.getcw(), file_path)
             print(file_path)
             open(file_path,"w+").close()
             return True
