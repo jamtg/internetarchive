@@ -214,9 +214,9 @@ class File(BaseFile):
             file_path = os.path.join(destdir, file_path)
             n = file_path.split(".")[1]
             if n == 'jpg' or n == 'gif' :
-            #print(file_path)
-            open(file_path,"w+").close()
-            return True
+                #print(file_path)
+                open(file_path,"w+").close()
+                return True
             
 
         if not return_responses and os.path.exists(file_path.encode('utf-8')):
