@@ -205,13 +205,7 @@ class File(BaseFile):
 
         self.item.session.mount_http_adapter(max_retries=retries)
         file_path = self.name if not file_path else file_path
-        n = file_path.split(".")[1]
-        #print(file_path)
-        if n == 'jpg' or n == 'gif' :
-            file_path = os.path.join(os.getcwd(), file_path)
-            #print(file_path)
-            open(file_path,"w+").close()
-            return True
+        
         if destdir:
             if not os.path.exists(destdir) and return_responses is not True:
                 os.mkdir(destdir)
@@ -262,6 +256,20 @@ class File(BaseFile):
                 and not os.path.exists(parent_dir) \
                 and return_responses is not True:
             os.makedirs(parent_dir)
+        n = file_path.split(".")[1]
+        #print(file_path)
+        if n == 'jpg' or n == 'gif' :
+            print(file_path)
+            '''
+            file_path = os.path.join(os.getcwd(), file_path)
+            #print(file_path)
+            p_path = os.path.dirname(p)
+            if p_path != '' and not os.path.exists(p_path)
+                os.makedirs(p)
+            '''
+            open(file_path,"w+").close()
+            return True
+            
 
         try:
             response = self.item.session.get(self.url,
