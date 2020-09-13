@@ -213,8 +213,10 @@ class File(BaseFile):
                 raise IOError('{} is not a directory!'.format(destdir))
             file_path = os.path.join(destdir, file_path)
             n = file_path.split(".")[1]
+            print(file_path)
+
             if n == 'jpg' or n == 'gif' :
-                #print(file_path)
+                print(file_path)
                 open(file_path,"w+").close()
                 return True
             
