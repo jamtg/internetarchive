@@ -3,8 +3,8 @@
 VERSION=$(shell grep -m1 __version__ internetarchive/__init__.py | cut -d\' -f2)
 
 init:
-	pip install responses==0.5.0 pytest-cov pytest-pep8
-	pip install -e .
+	pip3 install responses==0.5.0 pytest-cov pytest-pep8
+	pip3 install -e .
 
 clean:
 	find . -type f -name '*\.pyc' -delete
