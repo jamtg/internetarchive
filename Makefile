@@ -31,7 +31,7 @@ docs:
 
 binary:
 	# This requires using https://github.com/jjjake/pex which has been hacked for multi-platform support.
-	pex . --python python3.5 --python python2 --python-shebang='/usr/bin/env python' --platform=linux-x86_64-cp-35-m -e internetarchive.cli.ia:main -o ia-$(VERSION)-py2.py3-none-any.pex -r pex-requirements.txt # make with py2???
+	pex . --python python3.7 --python python2 --python-shebang='/usr/bin/env python' --platform=linux-x86_64-cp-37-m -e internetarchive.cli.ia:main -o ia-$(VERSION)-py2.py3-none-any.pex -r pex-requirements.txt # make with py2???
 	# Use pex==1.4.0
 	#pex . --python python3 --python /usr/bin/python --python-shebang='/usr/bin/env python' --platform=linux-x86_64 --platform=macosx_10_11 -e internetarchive.cli.ia:main -o ia-$(VERSION)-py2.py3-none-any.pex -f wheelhouse/ --no-pypi
 
