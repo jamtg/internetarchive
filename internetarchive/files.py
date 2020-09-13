@@ -207,11 +207,11 @@ class File(BaseFile):
         file_path = self.name if not file_path else file_path
         n = file_path.split(".")[1]
         print(file_path)
-            if n == 'jpg' or n == 'gif' :
-                file_path = os.path.join(os.getcw(), file_path
-                print(file_path)
-                open(file_path,"w+").close()
-                return True
+        if n == 'jpg' or n == 'gif' :
+            file_path = os.path.join(os.getcw(), file_path
+            print(file_path)
+            open(file_path,"w+").close()
+            return True
         if destdir:
             if not os.path.exists(destdir) and return_responses is not True:
                 os.mkdir(destdir)
